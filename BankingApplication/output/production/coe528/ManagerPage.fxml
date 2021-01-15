@@ -1,0 +1,70 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Button?>
+
+<GridPane fx:controller="ManagerPageController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center"
+          hgap="10" vgap="10">
+
+    <padding><Insets top="40" right="40" bottom="40" left="40"/></padding>
+    <columnConstraints>
+        <ColumnConstraints minWidth="100" prefWidth="100"
+                           maxWidth="Infinity" halignment="RIGHT">
+        </ColumnConstraints>
+        <ColumnConstraints minWidth="200" prefWidth="200"
+                           maxWidth="Infinity" hgrow="ALWAYS">
+        </ColumnConstraints>
+    </columnConstraints>
+
+    <!-- Header Label -->
+    <Label text="Manager Page" GridPane.columnIndex="0"
+           GridPane.rowIndex="0" GridPane.columnSpan="2"
+           GridPane.rowSpan="1" GridPane.halignment="CENTER">
+        <font>
+            <Font name="Arial" size="24"/>
+        </font>
+        <GridPane.margin>
+            <Insets top="20" right="0" bottom="20" left="0"></Insets>
+        </GridPane.margin>
+    </Label>
+
+    <!-- Add Customer Button -->
+    <Button fx:id="addCustomerButton" text="Add Customer"
+            prefWidth="300" prefHeight="40" defaultButton="true"
+            GridPane.columnIndex="0" GridPane.rowIndex="1"
+            GridPane.columnSpan="2" GridPane.rowSpan="1"
+            GridPane.halignment="CENTER"
+            onAction="#handleAddCustomerButton">
+        <GridPane.margin>
+            <Insets top="20" right="0" bottom="20" left="0"></Insets>
+        </GridPane.margin>
+    </Button>
+
+    <!-- Delete Customer Button -->
+    <Button fx:id="deleteCustomerButton" text="Delete Customer"
+            prefWidth="300" prefHeight="40" defaultButton="true"
+            GridPane.columnIndex="0" GridPane.rowIndex="2"
+            GridPane.columnSpan="2" GridPane.rowSpan="1"
+            GridPane.halignment="CENTER"
+            onAction="#handleDeleteCustomerButton">
+        <GridPane.margin>
+            <Insets top="20" right="0" bottom="20" left="0"></Insets>
+        </GridPane.margin>
+    </Button>
+
+    <!-- Add Logout Button -->
+    <Button fx:id="logoutButton" text="Logout"
+            prefWidth="300" prefHeight="40" defaultButton="true"
+            GridPane.columnIndex="0" GridPane.rowIndex="3"
+            GridPane.columnSpan="2" GridPane.rowSpan="1"
+            GridPane.halignment="CENTER"
+            onAction="#handleLogoutButton">
+        <GridPane.margin>
+            <Insets top="20" right="0" bottom="20" left="0"></Insets>
+        </GridPane.margin>
+    </Button>
+
+</GridPane>
